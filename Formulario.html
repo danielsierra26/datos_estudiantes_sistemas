@@ -1,82 +1,268 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulario de Registro</title>
-  <script>
-    function validarFormulario() {
-      var apellidos = document.getElementById('apellidos').value;
-      var nombre = document.getElementById('nombre').value;
-      var fechaNacimiento = document.getElementById('fecha-nacimiento').value;
-      var lugarNacimiento = document.getElementById('lugar-nacimiento').value;
-      
-      if (apellidos === "" || nombre === "" || fechaNacimiento === "" || lugarNacimiento === "") {
-        alert("Por favor completa todos los campos obligatorios.");
-        return false;
-      }
-      return true;
-    }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Inscripción - Especialidad en Sistemas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+        }
+        h1 {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+        th {
+            background-color: #eee;
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
-  <h1>Datos del Estudiante</h1>
-  <form onsubmit="return validarFormulario()">
-    <>
-      <legend>Datos Personales</legend>
-      <label for="apellidos">Apellidos:</label>
-      <input type="text" id="apellidos" name="apellidos" required>
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" required>
-      <label for="fecha-nacimiento">Fecha de nacimiento:</label>
-      <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
-      <label for="lugar-nacimiento">Lugar de nacimiento:</label>
-      <input type="text" id="lugar-nacimiento" name="lugar-nacimiento" required>
-      <labe for="Edad">Edad</labe>
-      <input type="number" id="edad" name="edad" required>
-      <label for="tipo Documento Identidad">Tipo Documento Identidad</label>
-      <input type="text" id="Tipo Documento Identidad" name="Tipo Documento Identidad" required>
-      <label for="Número Documento Identidad">Número Documento Identidad</label>
-      <input type="number" id="Número Documento Identidad" name="Número Documento Identidad" required>
-      <label for="Lugar Expedición Documento Identidad">Lugar Expedición Documento Identidad</label>
-      <input type="text" id="Lugar Expedición Documento Identidad " name="Lugar Expedición Documento Identidad" required>
-      <label for="Dirección">Dirección: </label>
-      <input type="text" id="Dirección" name="Dirección" required>
-      <label for="Barrio">Barrio</label>
-      <input type="text" id="Barrio" name="Barrio" required>
-      <label for="Ciudad">Ciudad</label>
-      <input type="text" id="Ciudad" name="Ciudad" required>
-      <label for="Teléfono">Teléfono</label>
-      <input  type="number" id="Teléfono" name="Teléfono" required>
-      <label for=" Celular"> Celular</label>
-      <input type="number" id=" Celular" name=" Celular" required>
-      <label for=" E-mail personal"> E-mail personal</label>
-      <input type="email" id=" E-mail personal" name=" E-mail personal" required>
-      <label for="E-mail inst" >E-mail inst</label>
-      <input type="email" id="E-mail inst" name="E-mail inst" required>
-      <label for="Tipo de Sangre">Tipo de Sangre</label>
-      <input type="text" id="Tipo de Sangre" name="Tipo de Sangre" required>
-      <label for="EPS">EPS</label>
-      <input type="text" id="EPS" name="EPS"required>
-      <label for="¿Sufre alguna enfermedad?">¿Sufre alguna enfermedad?</label>
-      <input type="text" id="¿Sufre alguna enfermedad?" name="¿Sufre alguna enfermedad?" required>
-      <label for="Cuál?">Cuál?</label>
-      <input type="text" id="Cuál?" name="Cuál?" required>
-      <label for="Estrato socioeconómico">Estrato socioeconómico</label>
-      <input type="number" id="Estrato socioeconómico" name="Estrato socioeconómico" required>
-      <label for=" Familias en Acción"> Familias en Acción</label>
-      <input type="text" id=" Familias en Acción" name=" Familias en Acción" required>
-      <label for="Tipo de Religión">Tipo de Religión</label>
-      <input type="text" id="Tipo de Religión" name="Tipo de Religión" required>
-      <label for="Relación Padres">Relación Padres</label>
-      <input type="text" id="Relación Padres" name="Relación Padres" required>
-      <label for="Computadora en casa">Computadora en casa</label>
-      <input type="text" id="Computadora en casa" name="Computadora en casa" required>
-     </fieldset>
+    <h1>Formulario de Inscripción - Especialidad en Sistemas</h1>
 
-    <
+    **DATOS DEL ESTUDIANTE**
 
-    <button type="submit">Enviar</button>
-  </form>
-</body>
-</html>
+    <table>
+        <tr>
+            <th>Apellidos:</th>
+            <td><input type="text" name="apellidos" size="30"></td>
+        </tr>
+        <tr>
+            <th>Nombre:</th>
+            <td><input type="text" name="nombre" size="30"></td>
+        </tr>
+        <tr>
+            <th>Fecha de nacimiento:</th>
+            <td><input type="date" name="fecha_nacimiento"></td>
+        </tr>
+        <tr>
+            <th>Lugar de nacimiento:</th>
+            <td><input type="text" name="lugar_nacimiento" size="30"></td>
+        </tr>
+        <tr>
+            <th>Edad:</th>
+            <td><input type="number" name="edad" size="3"></td>
+        </tr>
+        <tr>
+            <th>Tipo Documento Identidad:</th>
+            <td>
+                <select name="tipo_documento">
+                    <option value="TI">T.I.</option>
+                    <option value="CC">C.C.</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>Número Documento Identidad:</th>
+            <td><input type="number" name="numero_documento" size="15"></td>
+        </tr>
+        <tr>
+            <th>Lugar Expedición Documento Identidad:</th>
+            <td><input type="text" name="lugar_expedicion" size="30"></td>
+        </tr>
+        <tr>
+            <th>Dirección:</th>
+            <td><input type="text" name="direccion" size="50"></td>
+        </tr>
+        <tr>
+            <th>Barrio:</th>
+            <td><input type="text" name="barrio" size="20"></td>
+        </tr>
+        <tr>
+            <th>Teléfono:</th>
+            <td><input type="number" name="telefono" size="15"></td>
+        </tr>
+        <tr>
+            <th>Celular:</th>
+            <td><input type="number" name="celular" size="15"></td>
+        </tr>
+        <tr>
+            <th>E-mail personal:</th>
+            <td><input type="email" name="email_personal" size="30"></td>
+        </tr>
+        <tr>
+            <th>Ciudad:</th>
+            <td><input type="text" name="ciudad" size="20"></td>
+        </tr>
+        <tr>
+            <th>Tipo de Sangre:</th>
+            <td><input type="text" name="tipo_sangre" size="3"></td>
+        </tr>
+        <tr>
+            <th>E-mail inst:</th>
+            <td><input type="email" name="email_inst" size="30"></td>
+        </tr>
+        <tr>
+            <th>EPS:</th>
+            <td><input type="text" name="eps" size="20"></td>
+        </tr>
+        <tr>
+            <th>¿Sufre alguna enfermedad?</th>
+            <td>
+                <input type="radio" name="enfermedad" value="si"> Si
+                <input type="radio" name="enfermedad" value="no" checked> No
+            </td>
+        </tr>
+        <tr>
+            <th>Cuál?:</th>
+            <td><input type="text" name="enfermedad_descripcion" size="30"></td>
+        </tr>
+        <tr>
+            <th>Estrato socioeconómico:</th>
+            <td><input type="number" name="estrato" size="2"></td>
+        </tr>
+        <tr>
+            <th>Familias en Acción:</th>
+            <td>
+              <input type="radio" name="Familias" value="si"> Si
+              <input type="radio" name="Familias" value="no" checked> No
+            </td>
+            <tr>
+              <th>Tipo de religion:</th>
+              <td><input type="text" name="enfermedad_descripcion" size="30"></td>
+          </tr>
+          <tr>
+            <th>Relacion Padres:</th>
+            <td>
+              <input type="radio" name="Casados" value="Casados"> Casados
+              <input type="radio" name="Divorsiados" value="Divorciados"> Divorciados
+              <input type="radio" name="Divorsiados" value="Union Libre"> Union Libre
+              <input type="radio" name="otros" value="Otros" checked> otros
+            </td>
+            <tr>
+              <tr>
+                <th>Computadora en Casa:</th>
+                <td>
+                  <input type="radio" name="Computadora" value="si"> Si
+                  <input type="radio" name="Computadora" value="no" checked> No
+                </td>
+                <tr>
+                  <>
+                    <th>Internet en Casa:</th>
+                    <td>
+                      <input type="radio" name="Internet" value="si"> Si
+                      <input type="radio" name="Internet" value="no" checked> No
+                    </td>
+                  </table>
+     **DATOS DEL PADRE**
+      <table>
+        <tr>
+          <th>Apellidos:</th>
+          <td><input type="text" name="apellidos" size="30"></td>
+      </tr>
+      <tr>
+        <th>Nombre:</th>
+        <td><input type="text" name="nombre" size="30"></td>
+    </tr>
+    <tr>
+      <th>Dirección:</th>
+      <td><input type="text" name="direccion" size="50"></td>
+  </tr>
+  <tr>
+    <th>Barrio:</th>
+    <td><input type="text" name="barrio" size="20"></td>
+  </tr>
+  <tr>
+    <th>Teléfono:</th>
+    <td><input type="number" name="telefono" size="15"></td>
+</tr>
+<tr>
+    <th>Celular:</th>
+    <td><input type="number" name="celular" size="15"></td>
+</tr>
+<tr>
+  <th>E-mail:</th>
+  <td><input type="email" name="email" size="30"></td>
+</tr>
+<tr>
+  <th>Ocupación:</th>
+  <td><input type="text" name="Ocupación" size="30"></td>
+</tr>
+      </table>
+      **DATOS DE LA MADRE**
+      <table>
+        <tr>
+          <th>Apellidos:</th>
+          <td><input type="text" name="apellidos" size="30"></td>
+      </tr>
+      <tr>
+        <th>Nombre:</th>
+        <td><input type="text" name="nombre" size="30"></td>
+    </tr>
+    <tr>
+      <th>Dirección:</th>
+      <td><input type="text" name="direccion" size="50"></td>
+  </tr>
+  <tr>
+    <th>Barrio:</th>
+    <td><input type="text" name="barrio" size="20"></td>
+  </tr>
+  <tr>
+    <th>Teléfono:</th>
+    <td><input type="number" name="telefono" size="15"></td>
+</tr>
+<tr>
+    <th>Celular:</th>
+    <td><input type="number" name="celular" size="15"></td>
+</tr>
+<tr>
+  <th>E-mail:</th>
+  <td><input type="email" name="email" size="30"></td>
+</tr>
+<tr>
+  <th>Ocupación:</th>
+  <td><input type="text" name="Ocupación" size="30"></td>
+</tr>
+      </table>
+      **DATOS DEL ACUDIENTE**
+      <table>
+        <tr>
+          <th>Apellidos:</th>
+          <td><input type="text" name="apellidos" size="30"></td>
+      </tr>
+      <tr>
+        <th>Nombre:</th>
+        <td><input type="text" name="nombre" size="30"></td>
+    </tr>
+    <tr>
+      <th>Parentesco:</th>
+      <td><input type="text" name="Parentesco" size="30"></td>
+  </tr>
+    <tr>
+      <th>Dirección:</th>
+      <td><input type="text" name="direccion" size="50"></td>
+  </tr>
+  <tr>
+    <th>Barrio:</th>
+    <td><input type="text" name="barrio" size="20"></td>
+  </tr>
+  <tr>
+    <th>Teléfono:</th>
+    <td><input type="number" name="telefono" size="15"></td>
+</tr>
+<tr>
+    <th>Celular:</th>
+    <td><input type="number" name="celular" size="15"></td>
+</tr>
+<tr>
+  <th>E-mail:</th>
+  <td><input type="email" name="email" size="30"></td>
+</tr>
+<tr>
+  <th>Ocupación:</th>
+  <td><input type="text" name="Ocupación" size="30"></td>
+</tr>
+      </table>
+                <input type
+
+                
